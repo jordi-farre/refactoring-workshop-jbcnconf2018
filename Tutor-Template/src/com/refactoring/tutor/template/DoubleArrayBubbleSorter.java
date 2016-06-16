@@ -14,8 +14,7 @@ public class DoubleArrayBubbleSorter extends BubbleSorter<double[]> {
     }
 
     @Override
-    protected void swap(int i, int j) {
-        double temp = subject[i];
+    protected void swap(int i, int j) {double temp = subject[i];
        subject[i] = subject[j];
        subject[j] = temp;
     }
