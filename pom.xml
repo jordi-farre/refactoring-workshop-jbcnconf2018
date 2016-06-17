@@ -12,11 +12,13 @@
 
     <modules>
         <module>Bridge</module>
+		<module>Interpreter</module>
         <module>Template</module>
+        <module>Tutor-Bridge</module>
+		<module>Tutor-Interpreter</module>
+		<module>Tutor-Template</module>
 		<module>JBCNConf-Template</module>
         <module>JBCNConf-Bridge</module>
-        <module>Tutor-Template</module>
-        <module>Tutor-Bridge</module>
     </modules>
 
     <build>
