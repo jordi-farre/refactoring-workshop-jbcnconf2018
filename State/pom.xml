@@ -9,10 +9,10 @@
     <artifactId>refactoring-jbcnconf</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>Interpreter</artifactId>
+  <artifactId>State</artifactId>
   <packaging>jar</packaging>
 
-  <name>Interpreter</name>  
+  <name>State</name>
   
   <build>
 	
