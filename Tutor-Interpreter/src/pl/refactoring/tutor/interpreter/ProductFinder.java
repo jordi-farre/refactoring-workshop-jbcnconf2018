@@ -1,6 +1,5 @@
 package pl.refactoring.tutor.interpreter;
 
-import com.refactoring.tutor.interpreter.specs.*;
 import pl.refactoring.tutor.interpreter.specs.*;
 
 import java.awt.*;
