@@ -11,14 +11,14 @@
     <name>Refactoring at JBCNConf</name>
 
     <modules>
-        <module>Bridge</module>
-		<module>Interpreter</module>
+        <module>Interpreter</module>
+        <module>State</module>
         <module>Template</module>
+        <module>Bridge</module>
+        <module>Tutor-Interpreter</module>
+        <module>Tutor-State</module>
+        <module>Tutor-Template</module>
         <module>Tutor-Bridge</module>
-		<module>Tutor-Interpreter</module>
-		<module>Tutor-Template</module>
-		<module>JBCNConf-Template</module>
-        <module>JBCNConf-Bridge</module>
     </modules>
 
     <build>
