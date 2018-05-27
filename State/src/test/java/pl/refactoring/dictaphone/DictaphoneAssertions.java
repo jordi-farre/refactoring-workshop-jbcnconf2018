@@ -2,7 +2,6 @@ package pl.refactoring.dictaphone;
 
 import pl.refactoring.ex_dictaphone.Dictaphone;
 import pl.refactoring.ex_dictaphone.Engine;
-import pl.refactoring.ex_dictaphone.State;
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.Assertions;
 
@@ -50,7 +49,7 @@ public class DictaphoneAssertions extends AbstractAssert<DictaphoneAssertions, D
     }
 
     public DictaphoneAssertions isTurnedOff() {
-        isInState(State.OFF);
+        isInState(Dictaphone.OFF);
 
         isHeadInState(Engine.HeadState.PUT_AWAY);
         isMicrophoneEnabled(false);
@@ -61,7 +60,7 @@ public class DictaphoneAssertions extends AbstractAssert<DictaphoneAssertions, D
     }
 
     public DictaphoneAssertions isStopped() {
-        isInState(State.STOPPED);
+        isInState(Dictaphone.STOPPED);
 
         isHeadInState(Engine.HeadState.PUT_AWAY);
         isMicrophoneEnabled(false);
@@ -72,7 +71,7 @@ public class DictaphoneAssertions extends AbstractAssert<DictaphoneAssertions, D
     }
 
     public DictaphoneAssertions isPlaying() {
-        isInState(State.PLAYING);
+        isInState(Dictaphone.PLAYING);
 
         isHeadInState(Engine.HeadState.READING);
         isMicrophoneEnabled(false);
@@ -83,7 +82,7 @@ public class DictaphoneAssertions extends AbstractAssert<DictaphoneAssertions, D
     }
 
     public DictaphoneAssertions isPlayingPaused() {
-        isInState(State.PAUSED);
+        isInState(Dictaphone.PAUSED);
 
         isHeadInState(Engine.HeadState.READING);
         isMicrophoneEnabled(false);
@@ -94,7 +93,7 @@ public class DictaphoneAssertions extends AbstractAssert<DictaphoneAssertions, D
     }
 
     public DictaphoneAssertions isRecordingPaused() {
-        isInState(State.PAUSED);
+        isInState(Dictaphone.PAUSED);
 
         isHeadInState(Engine.HeadState.WRITING);
         isMicrophoneEnabled(true);
@@ -105,7 +104,7 @@ public class DictaphoneAssertions extends AbstractAssert<DictaphoneAssertions, D
     }
 
     public DictaphoneAssertions isRecording() {
-        isInState(State.RECORDING);
+        isInState(Dictaphone.RECORDING);
 
         isHeadInState(Engine.HeadState.WRITING);
         isMicrophoneEnabled(true);
@@ -116,7 +115,7 @@ public class DictaphoneAssertions extends AbstractAssert<DictaphoneAssertions, D
     }
 
     public DictaphoneAssertions isFastForwarding() {
-        isInState(State.FAST_FORWARD);
+        isInState(Dictaphone.FAST_FORWARD);
 
         isHeadInState(Engine.HeadState.PUT_AWAY);
         isMicrophoneEnabled(false);
@@ -127,7 +126,7 @@ public class DictaphoneAssertions extends AbstractAssert<DictaphoneAssertions, D
     }
 
     public DictaphoneAssertions isRewinding() {
-        isInState(State.REWIND);
+        isInState(Dictaphone.REWIND);
 
         isHeadInState(Engine.HeadState.PUT_AWAY);
         isMicrophoneEnabled(false);
@@ -138,7 +137,7 @@ public class DictaphoneAssertions extends AbstractAssert<DictaphoneAssertions, D
     }
 
     public DictaphoneAssertions isForwardPaying() {
-        isInState(State.FORWARD_PLAY_3x);
+        isInState(Dictaphone.FORWARD_PLAY_3x);
 
         isHeadInState(Engine.HeadState.READING);
         isMicrophoneEnabled(false);
@@ -149,7 +148,7 @@ public class DictaphoneAssertions extends AbstractAssert<DictaphoneAssertions, D
     }
 
     public DictaphoneAssertions isBackwardPlaying() {
-        isInState(State.BACKWARD_PLAY_3x);
+        isInState(Dictaphone.BACKWARD_PLAY_3x);
 
         isHeadInState(Engine.HeadState.READING);
         isMicrophoneEnabled(false);
