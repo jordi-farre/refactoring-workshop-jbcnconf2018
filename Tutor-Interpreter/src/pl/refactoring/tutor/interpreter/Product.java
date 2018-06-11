@@ -4,11 +4,11 @@ import java.awt.*;
 
 public class Product {
     final int id;
-    final Color color;
+    final ProductColor color;
     final String name;
     final ProductSize size;
     final float price;
-    public Product(String name, ProductSize size, float price, int id, Color color) {
+    public Product(String name, ProductSize size, float price, int id, ProductColor color) {
         this.name = name;
         this.size = size;
         this.price = price;
@@ -32,7 +32,7 @@ public class Product {
         return name;
     }
 
-    public Color getColor() {
+    public ProductColor getColor() {
         return color;
     }
 }

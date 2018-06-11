@@ -1,6 +1,5 @@
 package pl.refactoring.interpreter;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -15,7 +14,7 @@ public class ProductFinder {
         this.repository = repository;
     }
 
-    public List<Product> byColorAndBelowPrice(Color color, float price) {
+    public List<Product> byColorAndBelowPrice(ProductColor color, float price) {
         List<Product> foundProducts = new ArrayList<>();
         Iterator<Product> products = repository.iterator();
         while (products.hasNext()) {
@@ -26,7 +25,7 @@ public class ProductFinder {
         return foundProducts;
     }
 
-    public List<Product> belowPriceAvoidingAColor(float price, Color color) {
+    public List<Product> belowPriceAvoidingAColor(float price, ProductColor color) {
         List<Product> foundProducts = new ArrayList<Product>();
         Iterator<Product> products = repository.iterator();
         while (products.hasNext()) {
@@ -38,7 +37,7 @@ public class ProductFinder {
     }
 
 
-    public List<Product> byColor(Color color) {
+    public List<Product> byColor(ProductColor color) {
 
         List<Product> foundProducts = new ArrayList<>();
         Iterator<Product> products = repository.iterator();
@@ -50,7 +49,7 @@ public class ProductFinder {
         return foundProducts;
     }
 
-    public List<Product> byColorAndAbovePrice(Color color, float price) {
+    public List<Product> byColorAndAbovePrice(ProductColor color, float price) {
         List<Product> foundProducts = new ArrayList<>();
         Iterator<Product> products = repository.iterator();
         while (products.hasNext()) {
@@ -61,7 +60,7 @@ public class ProductFinder {
         return foundProducts;
     }
 
-    public List<Product> byColorSizeAndBelowPrice(Color color, ProductSize size, float price) {
+    public List<Product> byColorSizeAndBelowPrice(ProductColor color, ProductSize size, float price) {
         List<Product> foundProducts = new ArrayList<>();
         Iterator<Product> products = repository.iterator();
         while (products.hasNext()) {

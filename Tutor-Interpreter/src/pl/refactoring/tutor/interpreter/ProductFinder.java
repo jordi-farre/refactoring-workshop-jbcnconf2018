@@ -2,7 +2,6 @@ package pl.refactoring.tutor.interpreter;
 
 import pl.refactoring.tutor.interpreter.specs.*;
 
-import java.awt.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,7 +23,7 @@ public class ProductFinder {
     }
 
     @Deprecated
-    public List<Product> byColor(Color color) {
+    public List<Product> byColor(ProductColor color) {
         return bySpec(new ColorSpec(color));
     }
 
@@ -34,14 +33,14 @@ public class ProductFinder {
     }
 
     @Deprecated
-    public List<Product> byColorAndBelowPrice(Color color, float price) {
+    public List<Product> byColorAndBelowPrice(ProductColor color, float price) {
         Spec andSpec = new AndSpec(new BelowPriceSpec(price), new ColorSpec(color));
 
         return bySpec(andSpec);
     }
 
     @Deprecated
-    public List<Product> belowPriceAvoidingAColor(float price, Color color) {
+    public List<Product> belowPriceAvoidingAColor(float price, ProductColor color) {
         BelowPriceSpec belowPriceSpec = new BelowPriceSpec(price);
         NotSpec notColorSpec = new NotSpec(new ColorSpec(color));
 
@@ -49,7 +48,7 @@ public class ProductFinder {
     }
 
     @Deprecated
-    public List<Product> byColorAndAbovePrice(Color color, float price) {
+    public List<Product> byColorAndAbovePrice(ProductColor color, float price) {
         ColorSpec colorSpec = new ColorSpec(color);
         AbovePriceSpec abovePriceSpec = new AbovePriceSpec(price);
 
@@ -57,7 +56,7 @@ public class ProductFinder {
     }
 
     @Deprecated
-    public List<Product> byColorSizeAndBelowPrice(Color color, ProductSize size, float price) {
+    public List<Product> byColorSizeAndBelowPrice(ProductColor color, ProductSize size, float price) {
         ColorSpec colorSpec = new ColorSpec(color);
         SizeSpec sizeSpec = new SizeSpec(size);
         BelowPriceSpec priceSpec = new BelowPriceSpec(price);
